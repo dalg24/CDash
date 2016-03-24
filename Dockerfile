@@ -9,7 +9,9 @@ RUN docker-php-ext-install pdo mysql xsl curl gd
 
 # Set up time zone
 RUN echo "America/New_York" > /etc/timezone && \
-    dpkg-reconfigure --frontend noninteractive tzdata
+    dpkg-reconfigure --frontend noninteractive tzdata && \
+    echo "date.timezone=\"America/New_York\"" \
+        > /usr/local/etc/php/conf.d/php.ini
 
 # Checkout CDash using GIT.
 RUN cd /var/www/html && \
