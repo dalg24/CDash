@@ -106,7 +106,7 @@ $CDASH_BASE_URL = '';
 // Define the location of the local directory
 $CDASH_USE_LOCAL_DIRECTORY = '0';
 // CSS file
-$CDASH_CSS_FILE = 'css/cdash.css';
+$CDASH_CSS_FILE = 'cdash.css';
 // Backup directory
 $CDASH_BACKUP_DIRECTORY = $CDASH_ROOT_DIR . '/backup';
 // Log directory
