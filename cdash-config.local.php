@@ -26,15 +26,15 @@ $CDASH_ROOT_DIR = str_replace('\\', '/', dirname(dirname(__FILE__)));
 set_include_path(get_include_path() . PATH_SEPARATOR . $CDASH_ROOT_DIR);
 
 // Hostname of the database server
-$CDASH_DB_HOST = 'localhost';
+$CDASH_DB_HOST = '@CDASH_DB_HOST@';
 // Login for database access
-$CDASH_DB_LOGIN = 'cdash';
+$CDASH_DB_LOGIN = '@CDASH_DB_USER@';
 // Port for the database (leave empty to use default)
 $CDASH_DB_PORT = '';
 // Password for database access
-$CDASH_DB_PASS = '';
+$CDASH_DB_PASS = '@CDASH_DB_PASSWORD@';
 // Name of the database
-$CDASH_DB_NAME = 'cdash';
+$CDASH_DB_NAME = '@CDASH_DB_NAME@';
 // Database type
 $CDASH_DB_TYPE = 'mysql';
 
@@ -45,7 +45,7 @@ $CDASH_SSL_CA = null;
 
 // Turn this variable ON when CDash has been installed
 // Prevents from running the install.php again
-$CDASH_PRODUCTION_MODE = true;
+$CDASH_PRODUCTION_MODE = false;
 $CDASH_TESTING_MODE = false;
 $CDASH_TESTING_RENAME_LOGS = false;
 
