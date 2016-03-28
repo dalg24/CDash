@@ -1,0 +1,20 @@
+version: '2'
+services:
+  cdash:
+    build: .
+    environment:
+      - 'CDASH_DB_HOST=mysql:3306'
+      - CDASH_DB_NAME=cdash
+      - CDASH_DB_PASSWORD=pass
+      - CDASH_DB_USER=cdash
+    links:
+    - mysql
+    ports:
+    - "80:80"
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=cdash
+      - MYSQL_PASSWORD=pass
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_USER=cdash
